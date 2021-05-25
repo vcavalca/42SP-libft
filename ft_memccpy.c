@@ -6,7 +6,7 @@
 /*   By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 08:46:42 by vcavalca          #+#    #+#             */
-/*   Updated: 2021/05/25 09:00:02 by vcavalca         ###   ########.fr       */
+/*   Updated: 2021/05/25 17:20:28 by vcavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*new_src;
 	unsigned char	*new_dst;
 

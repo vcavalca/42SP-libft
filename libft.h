@@ -6,7 +6,7 @@
 /*   By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 18:56:56 by vcavalca          #+#    #+#             */
-/*   Updated: 2021/05/25 14:41:59 by vcavalca         ###   ########.fr       */
+/*   Updated: 2021/05/25 17:18:58 by vcavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 typedef struct s_list
 {
-	void	*content;
+	void			*content;
 	struct s_list	*next;	
 }	t_list;
 

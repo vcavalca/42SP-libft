@@ -6,7 +6,7 @@
 /*   By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 14:20:39 by vcavalca          #+#    #+#             */
-/*   Updated: 2021/05/25 14:23:28 by vcavalca         ###   ########.fr       */
+/*   Updated: 2021/05/25 17:22:20 by vcavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*back;
-	
+
 	if (lst == NULL || new == NULL)
 		return ;
 	if (*lst == NULL)
