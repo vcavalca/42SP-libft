@@ -6,7 +6,7 @@
 /*   By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 14:32:09 by vcavalca          #+#    #+#             */
-/*   Updated: 2021/05/25 14:35:42 by vcavalca         ###   ########.fr       */
+/*   Updated: 2021/05/25 17:15:39 by vcavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (lst == NULL || f = NULL)
+	if (lst == NULL || f == NULL)
 		return ;
 	while (lst)
 	{
