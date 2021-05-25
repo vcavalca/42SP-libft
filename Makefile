@@ -6,7 +6,7 @@
 #    By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/24 18:56:58 by vcavalca          #+#    #+#              #
-#    Updated: 2021/05/25 14:03:54 by vcavalca         ###   ########.fr        #
+#    Updated: 2021/05/25 14:54:44 by vcavalca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,17 +27,25 @@ FT_FILES = ft_memset ft_bzero ft_memcpy ft_memccpy ft_memmove \
 		ft_putchar ft_putstr ft_strcat ft_strcpy ft_strcmp \
 		ft_strstr ft_strncpy ft_strncat ft_strmalloc ft_putnbr \
 
+FT_FILES_BONUS = ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast ft_lstadd_back \
+		ft_lstdelone ft_lstclear ft_lstiter ft_lstmap
+
 RUN_DIR = ./
 RUN = $(addprefix $(RUN_DIR), $(addsuffix .c, $(FT_FILES)))
+RUN_BONUS = $(addprefix $(RUN_DIR), $(addsuffix .c, $(FT_FILES_BONUS)))
 
 RUN_DIR_O = ./
 RUN_O = $(addprefix $(RUN_DIR_O), $(addsuffix .o, $(FT_FILES)))
+RUN_O_BONUS = $(addprefix $(RUN_DIR_O), $(addsuffix .o, $(FT_FILES_BONUS)))
 
 .c.o: $(RUN)
 	$(CC) $(FLAGS) -c -o $@ @<
 
 $(NAME): $(RUN_O)
 	$(AR) $@ $^
+
+bonus: $(RUN_O_BONUS)
+	$(AR) $(NAME) $^
 
 all: $(NAME)
 
@@ -49,4 +57,4 @@ fclean: clean
 
 re: clean all
 
-.PHONY: all clean fclean re
+.PHONY: bonus all clean fclean re
