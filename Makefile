@@ -6,7 +6,7 @@
 #    By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/24 18:56:58 by vcavalca          #+#    #+#              #
-#    Updated: 2021/05/25 16:43:35 by vcavalca         ###   ########.fr        #
+#    Updated: 2021/05/25 17:12:18 by vcavalca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,8 +49,8 @@ bonus: $(RUN_O_BONUS)
 
 all: $(NAME)
 
-clean: $(RM)
-	$(RUN_O)
+clean: 
+	$(RM) $(RUN_O) $(RUN_O_BONUS)
 
 fclean: clean
 	$(RM) $(NAME)
