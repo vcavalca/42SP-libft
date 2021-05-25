@@ -6,7 +6,7 @@
 /*   By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 18:56:56 by vcavalca          #+#    #+#             */
-/*   Updated: 2021/05/25 13:27:37 by vcavalca         ###   ########.fr       */
+/*   Updated: 2021/05/25 14:07:20 by vcavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
+
+typedef struct s_list
+{
+	void	*content;
+	struct s_list	*next;	
+}	t_list;
 
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
