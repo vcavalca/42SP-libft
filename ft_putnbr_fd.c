@@ -6,7 +6,7 @@
 /*   By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 13:11:54 by vcavalca          #+#    #+#             */
-/*   Updated: 2021/05/25 17:00:25 by vcavalca         ###   ########.fr       */
+/*   Updated: 2021/05/25 17:01:43 by vcavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putnbr_fd(int n, int fd)
 	if (fd < 0)
 		return ;
 	if (n == -2147483648)
-		ft_putchar_fd('-2147483648', 11);
+		ft_putchar_fd("-2147483648", 11);
 	else if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
