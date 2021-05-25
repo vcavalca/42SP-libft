@@ -6,7 +6,7 @@
 /*   By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 20:57:53 by vcavalca          #+#    #+#             */
-/*   Updated: 2021/05/24 21:01:59 by vcavalca         ###   ########.fr       */
+/*   Updated: 2021/05/25 16:43:16 by vcavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	if (dst == NULL && src == NULL)
 		return (NULL);
 	i = 0;
+	new_dst = dst;
 	new_src = (unsigned char *)src;
 	while (i < n)
 	{
