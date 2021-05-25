@@ -6,7 +6,7 @@
 #    By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/24 18:56:58 by vcavalca          #+#    #+#              #
-#    Updated: 2021/05/25 14:54:44 by vcavalca         ###   ########.fr        #
+#    Updated: 2021/05/25 16:43:35 by vcavalca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ RUN_O = $(addprefix $(RUN_DIR_O), $(addsuffix .o, $(FT_FILES)))
 RUN_O_BONUS = $(addprefix $(RUN_DIR_O), $(addsuffix .o, $(FT_FILES_BONUS)))
 
 .c.o: $(RUN)
-	$(CC) $(FLAGS) -c -o $@ @<
+	$(CC) $(FLAGS) -c -o $@ $<
 
 $(NAME): $(RUN_O)
 	$(AR) $@ $^
