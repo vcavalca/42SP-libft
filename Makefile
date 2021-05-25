@@ -6,7 +6,7 @@
 #    By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/24 18:56:58 by vcavalca          #+#    #+#              #
-#    Updated: 2021/05/25 13:55:02 by vcavalca         ###   ########.fr        #
+#    Updated: 2021/05/25 14:03:54 by vcavalca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,3 +27,26 @@ FT_FILES = ft_memset ft_bzero ft_memcpy ft_memccpy ft_memmove \
 		ft_putchar ft_putstr ft_strcat ft_strcpy ft_strcmp \
 		ft_strstr ft_strncpy ft_strncat ft_strmalloc ft_putnbr \
 
+RUN_DIR = ./
+RUN = $(addprefix $(RUN_DIR), $(addsuffix .c, $(FT_FILES)))
+
+RUN_DIR_O = ./
+RUN_O = $(addprefix $(RUN_DIR_O), $(addsuffix .o, $(FT_FILES)))
+
+.c.o: $(RUN)
+	$(CC) $(FLAGS) -c -o $@ @<
+
+$(NAME): $(RUN_O)
+	$(AR) $@ $^
+
+all: $(NAME)
+
+clean: $(RM)
+	$(RUN_O)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: clean all
+
+.PHONY: all clean fclean re
