@@ -6,7 +6,7 @@
 /*   By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 20:06:53 by vcavalca          #+#    #+#             */
-/*   Updated: 2021/05/26 11:36:08 by vcavalca         ###   ########.fr       */
+/*   Updated: 2021/05/26 11:48:44 by vcavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,23 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t	count;
-	size_t	position;
-	size_t	hold;
+	size_t	i;
+	size_t	src_len;
 
-	hold = 0;
-	count = 1;
-	position = 0;
-	if (dstsize == 0)
-		return (ft_strlen(src));
+	i = 0;
 	if (!dst || !src)
 		return (0);
-	while (src[hold])
+	src_len = ft_strlen(src);
+	if (dstsize == 0)
+		return (src_len);
+	while (src[i] && i < dstsize)
 	{
-		hold++;
+		dst[i] = src[i];
+		i++;
 	}
-	if (hold != 0)
-	{
-		while (count < dstsize)
-		{
-			dst[position] = src[position];
-			count++;
-			position++;
-		}
-	}
-	dst[position] = '\0';
-	return (hold);
+	if (dstsize < src_len)
+		dst[dstsize - 1] = '\0';
+	else if (dstsize != 0)
+		dst[i] = '\0';
+	return (src_len);
 }
