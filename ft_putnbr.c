@@ -6,7 +6,7 @@
 /*   By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 13:22:45 by vcavalca          #+#    #+#             */
-/*   Updated: 2021/05/26 12:37:17 by vcavalca         ###   ########.fr       */
+/*   Updated: 2021/05/26 13:24:35 by vcavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,20 @@
 void	ft_putnbr(int n)
 {
 	if (n == -2147483648)
-	{
-		write(1, "-2147483648", 11);
-	}
-	if (n < 0)
+		ft_putstr("-2147483648");
+	else if (n < 0)
 	{
 		ft_putchar('-');
-		n *= -1;
+		ft_putnbr(-n);
 	}
-	if (n < 10)
+	else if (n > 9)
 	{
-		ft_putchar(n + 48);
-		return ;
+		ft_putnbr(n / 10);
+		ft_putchar(n % 10 + '0');
 	}
 	else
-		ft_putnbr(n / 10);
-	ft_putnbr(n % 10);
+	{
+		ft_putchar(n + '0');
+	}
+	return ;
 }
