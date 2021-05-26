@@ -6,7 +6,7 @@
 /*   By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 12:02:10 by vcavalca          #+#    #+#             */
-/*   Updated: 2021/05/25 12:22:33 by vcavalca         ###   ########.fr       */
+/*   Updated: 2021/05/26 12:36:29 by vcavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static char	*ft_malloc_strncpy(const char *s, size_t n)
 {
 	char	*new_s;
 
-	new_s = (char *)ft_strmalloc(n);
+	new_s = (char *)malloc(n + 1);
 	if (new_s == NULL)
 		return (NULL);
 	new_s = ft_strncpy(new_s, s, n);
