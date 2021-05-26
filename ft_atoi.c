@@ -6,7 +6,7 @@
 /*   By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 09:44:21 by vcavalca          #+#    #+#             */
-/*   Updated: 2021/05/25 17:21:09 by vcavalca         ###   ########.fr       */
+/*   Updated: 2021/05/26 09:12:09 by vcavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_atoi(const char *str)
 	unsigned int	i;
 
 	i = 0;
-	sign = 0;
+	sign = 1;
 	res = 0;
 	while (str[i] == ' ' || str[i] == '\t'
 		|| str[i] == '\n' || str[i] == '\r'
