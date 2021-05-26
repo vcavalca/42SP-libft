@@ -6,7 +6,7 @@
 /*   By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 20:19:13 by vcavalca          #+#    #+#             */
-/*   Updated: 2021/05/26 10:53:32 by vcavalca         ###   ########.fr       */
+/*   Updated: 2021/05/26 10:57:00 by vcavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		}
 		i++;
 	}
-	return ((unsigned char)s1 - (unsigned char)s2[i]);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
