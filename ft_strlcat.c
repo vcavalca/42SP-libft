@@ -6,7 +6,7 @@
 /*   By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 09:18:31 by vcavalca          #+#    #+#             */
-/*   Updated: 2021/05/26 11:55:48 by vcavalca         ###   ########.fr       */
+/*   Updated: 2021/05/26 12:04:28 by vcavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	{
 		while (src[i] != '\0' && dst_len + 1 + i < dstsize)
 		{
-			dst[dst_len + 1] = src[i];
+			dst[dst_len + i] = src[i];
 			i++;
 		}
 	}
