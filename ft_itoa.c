@@ -6,7 +6,7 @@
 /*   By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 12:40:49 by vcavalca          #+#    #+#             */
-/*   Updated: 2021/05/25 12:53:44 by vcavalca         ###   ########.fr       */
+/*   Updated: 2021/05/27 16:08:25 by vcavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ char	*ft_itoa(int n)
 	char	*s;
 	size_t	i;
 
-	i = ft_char_position_counter(n);
-	s = ft_strmalloc(i);
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
+	i = ft_char_position_counter(n);
+	s = ft_strmalloc(i);
 	if (s == NULL)
 		return (NULL);
 	s[i] = '\0';
