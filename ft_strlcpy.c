@@ -6,7 +6,7 @@
 /*   By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 20:06:53 by vcavalca          #+#    #+#             */
-/*   Updated: 2021/05/29 15:35:17 by vcavalca         ###   ########.fr       */
+/*   Updated: 2021/05/29 15:39:15 by vcavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,4 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		}
 	}
 	return (ft_strlen(src));
-}
+	}
