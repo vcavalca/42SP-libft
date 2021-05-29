@@ -6,7 +6,7 @@
 /*   By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 20:06:53 by vcavalca          #+#    #+#             */
-/*   Updated: 2021/05/29 15:58:30 by vcavalca         ###   ########.fr       */
+/*   Updated: 2021/05/29 17:19:03 by vcavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 	if (!dst && !src)
 		return (0);
-	if (dstsize <= 0)
-		return (ft_strlen(src));
 	i = 0;
 	while (src[i] && i < dstsize)
 	{
