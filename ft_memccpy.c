@@ -6,7 +6,7 @@
 /*   By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 08:46:42 by vcavalca          #+#    #+#             */
-/*   Updated: 2021/05/25 17:20:28 by vcavalca         ###   ########.fr       */
+/*   Updated: 2021/06/09 13:56:53 by vcavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	{
 		new_dst[i] = new_src[i];
 		if (new_src[i] == c)
-			return ((char *)dst + i + 1);
+			return ((unsigned char *)dst + i + 1);
 		i++;
 	}
 	return (NULL);
