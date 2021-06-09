@@ -6,7 +6,7 @@
 /*   By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 11:21:27 by vcavalca          #+#    #+#             */
-/*   Updated: 2021/06/09 14:07:45 by vcavalca         ###   ########.fr       */
+/*   Updated: 2021/06/09 14:09:20 by vcavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		j;
 
 	if (s1 == NULL)
-		return (s2);
+		return ((char *)s2);
 	if (s2 == NULL)
-		return (s1);
+		return ((char *)s1);
 	new_s = (char *)ft_strmalloc((ft_strlen(s1) + ft_strlen(s2)));
 	if (new_s == NULL || (!s1 && !s2))
 		return (NULL);
