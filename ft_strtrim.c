@@ -6,7 +6,7 @@
 /*   By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 11:42:43 by vcavalca          #+#    #+#             */
-/*   Updated: 2021/05/25 17:23:11 by vcavalca         ###   ########.fr       */
+/*   Updated: 2021/06/09 14:11:37 by vcavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	start = 0;
+	if (set == NULL)
+		return ((char *)s1);
+	if (s1 == NULL)
+		return (NULL);
 	while (s1[start] && ft_find_char_in_set(set, s1[start]) == 1)
 		start++;
 	end = ft_strlen(s1);
