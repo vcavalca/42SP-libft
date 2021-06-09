@@ -6,7 +6,7 @@
 /*   By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 12:55:19 by vcavalca          #+#    #+#             */
-/*   Updated: 2021/05/25 17:22:46 by vcavalca         ###   ########.fr       */
+/*   Updated: 2021/06/09 14:14:32 by vcavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 
 	i = 0;
+	if (s == NULL)
+		return (NULL);
 	new_s = (char *)ft_strmalloc(ft_strlen(s));
 	if (new_s == NULL)
 		return (NULL);
