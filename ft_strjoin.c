@@ -6,7 +6,7 @@
 /*   By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 11:21:27 by vcavalca          #+#    #+#             */
-/*   Updated: 2021/06/09 14:09:20 by vcavalca         ###   ########.fr       */
+/*   Updated: 2021/08/31 16:52:22 by vcavalca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*new_s;
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 
 	new_s = (char *)ft_strmalloc((ft_strlen(s1) + ft_strlen(s2)));
 	if (new_s == NULL)
