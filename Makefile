@@ -6,7 +6,7 @@
 #    By: vcavalca <vcavalca@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/24 18:56:58 by vcavalca          #+#    #+#              #
-#    Updated: 2021/09/07 08:12:16 by vcavalca         ###   ########.fr        #
+#    Updated: 2021/09/21 07:05:17 by vcavalca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@ar rsc $@ $^
-	@echo "Compiling $(NAME) done"
+	@echo "Successfully compiled $(NAME)"
 
 bonus: $(NAME) $(BONUS_OBJS)
 	@ar rsc $(NAME) $(BONUS_OBJS)
@@ -50,7 +50,7 @@ clean:
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "Removed $(NAME)"
+	@echo "Removed $(NAME) file"
 
 re: fclean all
 
